@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box ;
+}
+
+body{
+    background-image: url(img/background\ -\ IMC.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #000A;
+    background-blend-mode: darken;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    --cor-destaque: #fcc91c;
+}
+
+header{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+main{
+   
+    flex-grow: 1;
+    display: flex;
+}
+footer{
+    text-align: center;
+    height: 40px;
+}
+
+footer span{
+    color: white;
+    font-size: 0,10rem;
+}
+h1{
+    color: white;
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+section{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categorias th{
+  background-color: var(--cor-destaque);
+  height: 50px;
+  width: 500px ;
+  border-radius: 5px;
+  font-weight: 400px;
+}
+.categorias table{
+ font-size: 1.5rem;
+ border-spacing: 5px;
+}
+
+.categorias td{
+    background-color: var(--cor-destaque);
+    height: 50px;
+    width: 250px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.calculadora form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calculadora label{
+    color: white;
+}
+
+.calculadora .campo{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.calculadora .campo.unidade::before {
+    content: attr(data-unidade);
+    content: "metros";
+    color: black;
+    display: flex;
+    position: absolute;
+    background-color: var(--cor-destaque);
+    right: 0;
+    bottom: 0;
+    width:50px ;
+    height: 50px;
+   justify-content: center;
+   align-items: center;
+   border-radius: 0 5px 5px 0;
+}
+
+.calculadora input{
+    height: 50px;
+    border: 2px solid var(--cor-destaque);
+    background-color: transparent;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    padding-left: 0 10px;
+    font-size: 1rem;
+    font-weight: 200;
+    font-family:  'Roboto', sans-serif;
+}
+
+button{
+    background-color: var(--cor-destaque);
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+
+}
+
+.calculadora .resultado{
+    height: 100px;
+    background-color: var(--cor-destaque);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+@media (max-width: 138px) {
+
+    main{
+        flex-direction: column-reverse;
+    }
+    section{
+        height: 100vh;
+    }
+    .categorias{
+        display: none;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    .calculadora form{
+        width: 80%;
+    }
+}
+
